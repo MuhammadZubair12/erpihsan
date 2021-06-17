@@ -1,0 +1,103 @@
+{
+ "creation": "2020-09-09 23:08:51.565583",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ip",
+  "port",
+  "att_type",
+  "fetch_attendance",
+  "column_break_4",
+  "start_date",
+  "end_date",
+  "employee",
+  "section_break_7",
+  "machines"
+ ],
+ "fields": [
+  {
+   "fieldname": "ip",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "port",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Port",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fetch_attendance",
+   "fieldtype": "Button",
+   "label": "Fetch Attendance"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "machines",
+   "fieldtype": "Table",
+   "label": "Machines",
+   "options": "Machines",
+   "reqd": 1
+  },
+  {
+   "fieldname": "att_type",
+   "fieldtype": "Select",
+   "label": "Attendance Type",
+   "options": "IN\nOUT",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "modified": "2020-10-24 16:48:38.866445",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Attendance Machine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

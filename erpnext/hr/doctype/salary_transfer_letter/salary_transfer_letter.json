@@ -1,0 +1,108 @@
+{
+ "autoname": "STL-.#####",
+ "creation": "2020-12-04 16:32:35.184117",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "to_line_1",
+  "to_line_2",
+  "column_break_4",
+  "salary_transfer",
+  "month_of",
+  "section_break_7",
+  "checque_no",
+  "checque_date",
+  "account_no",
+  "column_break_11",
+  "total_amount",
+  "in_words"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "to_line_1",
+   "fieldtype": "Data",
+   "label": "To Line 1"
+  },
+  {
+   "fieldname": "to_line_2",
+   "fieldtype": "Data",
+   "label": "To Line 2"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_transfer",
+   "fieldtype": "Data",
+   "label": "Salary Transfer"
+  },
+  {
+   "fieldname": "month_of",
+   "fieldtype": "Data",
+   "label": "Month of"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checque_no",
+   "fieldtype": "Data",
+   "label": "Checque No"
+  },
+  {
+   "fieldname": "checque_date",
+   "fieldtype": "Date",
+   "label": "Checque Date"
+  },
+  {
+   "fieldname": "account_no",
+   "fieldtype": "Data",
+   "label": "Account No"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "in_words",
+   "fieldtype": "Data",
+   "label": "In Words"
+  }
+ ],
+ "modified": "2020-12-04 16:32:35.184117",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Salary Transfer Letter",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

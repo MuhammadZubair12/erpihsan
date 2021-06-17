@@ -1,0 +1,120 @@
+<h2 class="text-center">{%= __("Timesheet") %}</h2>
+<h5 class="text-center">
+	{%= frappe.datetime.str_to_user(filters.from_date) %}
+	{%= __("to") %}
+	{%= frappe.datetime.str_to_user(filters.to_date) %}
+</h5>
+<hr>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>{%= __("Date") %}</th>
+			<th>{%= __("Shift") %}</th>
+			<th>{%= __("Remarks") %}</th>
+			<th>{%= __("Date In") %}</th>
+			<th>{%= __("Time In") %}</th>
+			<th>{%= __("Date Out") %}</th>
+			<th>{%= __("Time Out") %}</th>
+			<th>{%= __("Work Hours") %}</th>
+			<th>{%= __("Late Arr.") %}</th>
+			<th>{%= __("Early Hours") %}</th>
+			<th>{%= __("Overtime") %}</th>
+			<th>{%= __("Add. Overtime") %}</th>
+			<th>{%= __("Type") %}</th>
+			<th>{%= __("Reason for Manual") %}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for(var i=0, l=data.length; i<l; i++) { %}
+			{% if(data[i].attendance_date) { %}
+				<tr>
+					<td>
+						{% if(data[i].attendance_date != "-") { %}
+							{%= frappe.datetime.str_to_user(data[i].attendance_date) %}
+						{% } else { %}
+						&nbsp;
+						{% } %}
+					</td>
+					<td>
+						{%= data[i].shift %}
+					</td>
+					<td>
+						{%= data[i].Remarks %}
+					</td>
+					<td>
+						{%= data[i].date_in %}
+					</td>
+					<td>
+						{%= data[i].time_in %}
+					</td>
+					<td>
+						{%= data[i].date_out %}
+					</td>
+					<td>
+						{%= data[i].Time_Out %}
+					</td>
+					<td>
+						{%= data[i].working_hours %}
+					</td>
+					<td>
+						{%= data[i].late_arrived %}
+					</td>
+					<td>
+						{%= data[i].early_hour %}
+					</td>
+					<td>
+						{%= data[i].hover_time %}
+					</td>
+					<td>
+						{%= data[i].additional_ot %}
+					</td>
+					<td>
+						{%= data[i].type %}
+					</td>
+					<td>
+						{%= data[i].reason_for_manual %}
+					</td>
+				</tr>
+			{% } else { %}
+				<tr class="mypage-break">
+					<td colspan="13">
+						&nbsp;
+					</td>
+				</tr>
+			{% } %}
+		{% } %}
+	</tbody>
+</table>
+<p class="text-right text-muted">Printed On {%= frappe.datetime.str_to_user(frappe.datetime.get_datetime_as_string()) %}</p>
+
+<style>
+	@media print {
+	  /*table tr.page-break {page-break-after: always !important;}*/
+	  /*tr.mypage-break {
+		display: block; 
+		page-break-before: always
+	  }*/
+
+	  /*tr{
+	  	display: block;
+	  }*/
+
+	  .table{
+        width:270mm;
+        min-width:270mm;
+	    }
+	    td, th{
+	        padding: 2mm 2mm 2mm 2mm !important;
+	        display: table-cell;
+	        word-break:break-all;
+	        width:23mm;
+	        min-width:23mm;
+	    }
+	    tr{
+	       display:block;
+	    }
+	    tr.mypage-break  { 
+	       page-break-before: always; 
+	    }
+	}
+</style>

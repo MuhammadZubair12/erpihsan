@@ -1,0 +1,48 @@
+{
+ "creation": "2020-09-17 15:39:59.044276",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "start_date",
+  "end_date",
+  "shift"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shift",
+   "options": "Shift Type",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-09-17 15:40:15.580860",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Employee Shift",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
